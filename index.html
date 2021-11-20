@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+        <!-- Bootstrap -->
+
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/6fedced9fe.js" crossorigin="anonymous" defer></script>
+        <!-- Fontawesome -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/history.css">
+        <!-- CSS -->
+
+        <!-- JS -->
+        <script src="./js/DOMUtil.js" defer></script>
+        <script src="./js/ViewModel.js" defer></script>
+        <!-- JS -->
+        <title>Calculator</title>
+    </head>
+    <body>
+        <header class="bg-dark container pb-2 line mt-2"><h1 class="text-center mb-0">Calculator</h1></header>
+        <div class="container bg-dark pt-md-5 pb-md-5">
+            <div class="row">  
+                <div class="col">      
+                    <div class="row mb-3">
+                        <label class="col-form-label col-sm-2">Operand 1</label>
+                        <div class="col-sm-6">
+                            <input class="input-dark form-control" type="number" id="operand1">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label col-sm-2">Operand 2</label>
+                        <div class="col-sm-6">
+                            <input class="input-dark form-control" type="number" id="operand2">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label col-sm-2">Operator</label>
+                        <div class="col-sm-6">
+                            
+                            <select name="operator" id="operator" class="input-dark form-control">
+                                <option value="+">Add (+)</option>
+                                <option value="-">Sub (-)</option>
+                                <option value="*">Mult (*)</option>
+                                <option value="/">Div (/)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-2"></label>
+                        <div class="col-sm-7">
+                            <button class="btn btn-primary col-sm-5" id="calculate">Calculate</button>
+                            <button class="btn btn-danger col-sm-5" id="reset"><i class="fas fa-redo"></i> Reset</button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label col-sm-2">Output</label>
+                        <div class="col-sm-6">
+                            <output class="input-dark form-control" id="output">0</output>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h2>Calculator History</h2>
+                    <ul id="history" class="history rounded">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

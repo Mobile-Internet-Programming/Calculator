@@ -1,0 +1,17 @@
+.history{
+    width: 25vw;
+    padding-left: 0px;
+    background-color: rgb(63, 63, 63);
+    padding: 10px 10px;
+    min-height: 3.5rem;
+    overflow-y: auto;
+    max-height: 14rem;
+}
+.historyItem{
+    list-style: none;
+    background-color: rgb(83, 83, 83);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 3px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
