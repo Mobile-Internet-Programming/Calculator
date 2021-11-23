@@ -11,7 +11,8 @@ http.createServer((req, res) => {
         operator: decodeURIComponent(q.query.operator),
         operand2: Number(q.query.operand2)
     }
-    res.end(JSON.stringify(calculate(calcObj)));
+    res.write(JSON.stringify(calculate(calcObj)));
+    res.end();
 }).listen(PORT, () => {
     console.log("Server started at port: " + PORT + " | http://localhost:" + PORT);
 });

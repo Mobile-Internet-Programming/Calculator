@@ -1,9 +1,6 @@
 body{
     background-color: rgb(50, 50, 50);
 }
-.colorWhite{
-    color: white;
-}
 .hover-dark:hover{
     background-color: #30363b;
     color: white;

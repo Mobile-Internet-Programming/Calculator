@@ -64,12 +64,13 @@ class ViewModel {
                     operand2: Number(this.calcObj.operand2)
                 },
                 {},
-                (sum) => { this.domUtils.setValue('output', sum); this.addHistoryItem(`${this.calcObj.operand1} ${this.calcObj.operator} ${this.calcObj.operand2} = ${Number(sum).toFixed(2)}`); this.render()}
+                (sum) => { this.domUtils.setValue('output', sum); this.addHistoryItem(`${Number(this.calcObj.operand1)} ${this.calcObj.operator} ${Number(this.calcObj.operand2)} = ${Number(sum).toFixed(2)}`); this.render()}
             );
         };
         reset () {
-            this.calcObj.operand1 = 0;
-            this.calcObj.operand2 = 0;
+            this.calcObj.operand1 = "";
+            this.calcObj.operand2 = "";
+            this.calcObj.operator = "+";
 
             this.domUtils.setFormValue(this.calcObj);
             this.domUtils.setValue("output", 0);
